@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python-Databse Lab11</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimeentry.css"> 
+    <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+    <script type="text/javascript" src="js/jquery.datetimeentry.js"></script>
+
+</head>
+<body>
+   <div class="wrapper">
+   <div id="form">
+    <form action="http://localhost/cgi-bin/v1.py" method="post">
+              
+                   <div class="formbox"><label for="date">Date:</label>
+                   <input type="text" name="dateValue" id="dateValue" required value="" placeholder="Date"></div>
+
+                   <div class="formbox"><label for="time">Time:</label>
+                   <input type="text" name="timeValue" id="timeValue" required value="" placeholder="Time"></div>
+                  
+                   <div class="formbox"><input type="submit" name="btnSubmit" id="btnSubmit" required value="SUBMIT" class="btn"/></div>    
+               
+           </form>
+           </div>
+    <div id="table">
+           
+    <table>
+     <caption>Information</caption>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>DATE</th>
+          <th>TIME</th>
+          <th>TEMPERATURE</th>
+          <th>HUMIDITY</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+<script>
+$(function () {
+        $.datetimeEntry.setDefaults({spinnerImage: 'img/spinnerDefault.png'});
+        $('#defaultEntry').datetimeEntry();
+        $('#dateValue').datetimeEntry({datetimeFormat: 'O/D/Y'});
+        $('#timeValue').datetimeEntry({datetimeFormat: 'H:Ma'});
+});
+
+</script>
+
+    </div>
+    </div>
+</body>
+</html>
